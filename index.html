@@ -9,19 +9,14 @@
   <link href="css/keyframes.css" rel="stylesheet" />
 </head>
 
-<body  id="page">
- 
+<body id="page">
+  <h2></h2>
   <section class="settings">
     <audio src="music/music-neon.mp3" controls autoplay></audio>
-    <h2></h2>
-
   </section>
-  
-  
   <section class="sunset">
     <div id="circle">
     </div>
-
   </section>
   <section class="city">
     <?xml version='1.0' encoding='utf-8'?>
@@ -252,7 +247,6 @@
         </g>
       </g>
     </svg>
-
   </section>
   <section class="soundwave">
     <div class="wave-left">
@@ -287,13 +281,17 @@
     </div>
   </section>
   <section class="ground">
-    
-    <img src="images/car.png">
-
+    <div class="controls">
+      <input type="radio" id="left" name="control" value="left">
+      <label for="left">&lt;</label>
+      <input type="radio" id="center" name="control" value="center">
+      <label for="center">&and;</label>
+      <input type="radio" id="right" name="control" value="right">
+      <label for="right">&gt;</label>
+      <button id="boost"></button>
+      <img src="images/car.png">
+      </form>
   </section>
-
-
-
 </body>
 
 </html>

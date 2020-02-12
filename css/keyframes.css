@@ -1,8 +1,6 @@
 /* Stars */
 @keyframes stars {
-  0% {
-    background-position-y: 0;
-  }
+
   100% {
     background-position-y: 250px;
 
@@ -13,73 +11,103 @@
 
 /* h2 */
 @keyframes text {
-    0% {
-      content: 'Please Standby.';
-    }
-  
-    25% {
-      content: 'Please Standby..';
-  
-    }
-    50% {
-      content: 'Please Standby...';
-  
-    }
-    75% {
-      content: 'Please Standby....';
-  
-    }
-    100% {
-      content: 'Please Standby.....';
-  
-    }
+  0% {
+    opacity: 1;
+    position: absolute;
+    z-index: 999;
+    content: 'please standby.';
+    background-color: #000;
+    left: 0;
+    right: 0;
+
+
+
   }
+
+  25% {
+    opacity: 1;
+    position: absolute;
+    z-index: 999;
+    content: 'please standby..';
+    left: 0;
+    right: 0;
+  }
+
+  50% {
+    opacity: 1;
+    position: absolute;
+    z-index: 999;
+    content: 'please standby...';
+    left: 0;
+    right: 0;
+  }
+
+  75% {
+    opacity: 1;
+    position: absolute;
+    z-index: 999;
+    content: 'Entering';
+    left: 0;
+    right: 0;
+  }
+
+  100% {
+    opacity: 0;
+    position: absolute;
+    z-index: -2;
+    content: 'Entering';
+    left: 0;
+    right: 0;
+  }
+}
+
 /* _____________________________________ */
 
 /* static html bg */
-  @keyframes static {
-    0% {
-      background-position: 0 0;
-    }
-  
-    100% {
-      background-position: 100% 100%;
-  
-    }
+@keyframes static {
+  0% {
+    background-position: 0 0;
   }
+
+  100% {
+    background-position: 100% 100%;
+
+  }
+}
+
 /* _____________________________________ */
 
 /* circle shadow */
-  @keyframes sunset {
-    0% {
-      box-shadow: 0px 0px 50px 4px rgba(255, 255, 255, 0.73);
-      /* transform: rotateZ(0deg); */
-    }
-  
-    25% {
-      box-shadow: 0px 0px 78px 4px rgba(255, 255, 255, 0.73);
-  
-    }
-  
-    50% {
-      box-shadow: 0px 0px 120px 4px rgba(255, 255, 255, 0.73);
-  
-    }
-  
-    75% {
-      box-shadow: 0px 0px 90px 4px rgba(255, 255, 255, 0.73);
-    }
-  
-    100% {
-      box-shadow: 0px 0px 50px 4px rgba(255, 255, 255, 0.73);
-  
-    }
+@keyframes sunset {
+  0% {
+    box-shadow: 0px 0px 50px 4px rgba(255, 255, 255, 0.73);
+    /* transform: rotateZ(0deg); */
   }
+
+  25% {
+    box-shadow: 0px 0px 78px 4px rgba(255, 255, 255, 0.73);
+
+  }
+
+  50% {
+    box-shadow: 0px 0px 120px 4px rgba(255, 255, 255, 0.73);
+
+  }
+
+  75% {
+    box-shadow: 0px 0px 90px 4px rgba(255, 255, 255, 0.73);
+  }
+
+  100% {
+    box-shadow: 0px 0px 50px 4px rgba(255, 255, 255, 0.73);
+
+  }
+}
 
 /* _____________________________________ */
 
-  /* musicbars */
-  @keyframes musicbar1 {
+/* musicbars */
+@keyframes musicbar1 {
   0% {
     height: 150px;
   }
@@ -301,28 +329,29 @@
     background-position-y: 250px;
   }
 }
+
 /* skyline city */
 @media (prefers-color-scheme: dark) {
-@keyframes windows {
-  0% {
-    fill: #FFFF61;
-  }
+  @keyframes windows {
+    0% {
+      fill: #FFFF61;
+    }
 
-  25% {
-    fill: black;
-  }
+    25% {
+      fill: black;
+    }
 
-  50% {
-    fill: #FFFF61;
-  }
+    50% {
+      fill: #FFFF61;
+    }
 
-  75% {
-    fill: black;
-  }
+    75% {
+      fill: black;
+    }
 
-  100% {
-    fill: #FFFF61;
+    100% {
+      fill: #FFFF61;
+    }
   }
-}
 
 }

@@ -1,41 +1,75 @@
-/*Import Google Fonts*/
-
+/*Fonts*/
+/* http://www.hipsthetic.com/alien-encounters-free-80s-font-family/ */
 /****************************/
-/* Preset codes toepasbaar voor elke pagina*/
+* {
+  box-sizing: border-box;
+}
+
 @font-face {
   font-family: Streamster;
   src: url(../font/SFAlienEncounters-Italic.ttf);
 }
 
 
-
-* {
-  box-sizing: border-box;
-}
-
 html {
-  z-index: -1;
+  /* z-index: -1; */
   background-image: url(../images/static.png);
   opacity: 0.87;
   animation: static .5s steps(10) infinite;
 }
 
 audio {
-  position: absolute;
+  position: unset;
   top: 15px;
   right: 15px;
 }
+
+h2::before {
+  position: absolute;
+  top: 0;
+  right: 0;
+  left: 0;
+  bottom: 0;
+  /* background-color: red; */
+  content: 'fagafafa';
+  transform: scale(3.5);
+  z-index: -5;
+  animation: text 5s ease 0s;
+  opacity: 1;
+}
+
+body::before {
+  background-color: #000;
+  content: "";
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  position: unset;
+  z-index: -5;
+  animation: text 5s ease 0s;
+}
+
 h2::after {
-  content: 'Please Standby.';
-  animation: text 2s linear infinite;
+  content: '';
+  animation: text 5s ease 0s;
+  z-index: -5;
 }
 
 h2 {
   position: absolute;
   color: #fff;
-  left: 15px;
-  top: 0;
+  left: 0;
+  top: 50%;
   font-family: Streamster;
+  right: 0;
+  bottom: 0;
+  width: 100%;
+  text-align: center;
+  transform: translateY(-50%);
+  font-size: 2.6em;
+  z-index: -5;
+  animation: text 5s ease 0s;
 }
 
 .settings p {
@@ -70,7 +104,7 @@ body::after {
   right: 31px;
   position: absolute;
   background-image: url("../images/disc.png");
-  z-index: -1;
+  z-index: 0;
   background-size: 5%;
   background-position-y: 0px;
   transform: scale(2) perspective(80px) rotatex(20deg);
@@ -81,7 +115,7 @@ body::after {
 body {
   margin: 0;
   background-color: #0B0834;
-  /* background-color: #9680e8; */
+  /* background-color: #9680e8; 
   min-height: calc(100vh - 0px);
   position: relative;
   z-index: 1;
@@ -120,7 +154,7 @@ main {
   color: transparent;
   margin: 0 auto;
   text-align: center;
-  background-image: linear-gradient(17deg, #FF83F8, #FF82F9,  #FF82F9, #FF82F9, #FF82F9, #AA94B1, #fff, #AA94B1, #FF82F9, #FF82F9, #FF82F9, #FF82F9,#FF83F8);
+  background-image: linear-gradient(17deg, #FFFF, #FFFF, #FF82F9, #FF82F9, #FF82F9, #AA94B1, #fff, #AA94B1, #FF82F9, #FF82F9, #FF82F9, #FFFF, #FFFF);
   animation: sunset 2s linear infinite;
 }
 
@@ -150,9 +184,9 @@ main {
 }
 
 .wave-left {
-  transform: perspective(131px) rotatey(31deg);
+  transform: translateX(-50%) perspective(8em) rotatey(31deg);
   position: absolute;
-  left: 220px;
+  left: 26%;
 }
 
 .wave-left li:first-child,
@@ -243,9 +277,9 @@ main {
 }
 
 .wave-right {
-  transform: perspective(130px) rotatey(-31deg);
+  transform: translateX(50%) perspective(130px) rotatey(-31deg);
   position: absolute;
-  right: 236px;
+  right: 26%;
 }
 
 .wave-right ul {
@@ -267,7 +301,7 @@ section.ground {
 section.ground::after {
   background-image: linear-gradient(90deg, #380CD6, #E50AE7, #380CD6);
   filter: brightness(1);
-  max-width: 53em;
+  max-width: 56%;
   overflow-x: hidden;
   padding: 0;
   transform: perspective(180px) rotatex(20deg);
@@ -285,7 +319,7 @@ section.ground::before {
   background-size: 200px;
   background-image: url(../images/grid.svg);
   filter: brightness(0.7);
-  max-width: 53em;
+  max-width: 56%;
   overflow: hidden;
   padding: 0;
   transform: perspective(180px) rotatex(20deg);
@@ -300,14 +334,9 @@ section.ground::before {
   margin: 0 auto;
 }
 
-.ground img:hover {
-  padding-bottom: 340px;
-  width: 7%;
-}
-
 .ground img {
   position: fixed;
-  bottom: 50px;
+  bottom: 70px;
   left: 50%;
   transform: translateX(-50%);
   z-index: 1;
@@ -328,29 +357,144 @@ svg {
   bottom: 0;
 }
 
-@media (prefers-color-scheme: dark) {
-  body  { background-color:  #0B0834;}
-  #circle {background-image: linear-gradient(17deg, #FF83F8, #FF82F9,  #FF82F9, #FF82F9, #FF82F9, #AA94B1, #fff, #AA94B1, #FF82F9, #FF82F9, #FF82F9, #FF82F9,#FF83F8);}
-  .fil0 {fill: black;}
-  .fil3 {fill: #FFFF61; animation: windows 2s linear infinite;}
-  .fil4 { fill: #FFFF61;animation: windows 3s linear infinite;}
-  .fil6 { fill: #FFFF61;  animation: windows 4s linear infinite;}
-  .fil2 {  fill: #FFFF61;animation: windows 5s linear infinite;}
-  .fil5 {  fill: #FFFF61; animation: windows 2s linear infinite;}
-  .fil1 { fill: #FFFF61; animation: windows 2s linear infinite;}
-
- 
+.controls {
+  color: #fff;
 }
+
+input#left:focus~img {
+  left: 35%;
+  transform: translateX(-65%);
+}
+
+input#center:focus~img {
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+input#right:focus~img {
+  left: 65%;
+  transform: translateX(-35%);
+}
+
+#boost:active~img,
+#boost:hover~img {
+  padding-bottom: 330px;
+  width: 4%;
+}
+
+#boost:hover {
+  background-color: #a50101;
+}
+
+#boost {
+  width: 35px;
+  height: 35px;
+  border-radius: 100%;
+  top: -4px;
+  position: relative;
+  background-color: red;
+  border-color: #000;
+}
+
+.controls {
+  position: absolute;
+  bottom: 50px;
+  left: 0;
+  right: 0;
+  text-align: center;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  z-index: 999;
+}
+
+input[type="radio"i] {
+  width: 25px;
+  height: 25px;
+}
+
+@media (prefers-color-scheme: dark) {
+  body {
+    background-color: #0B0834;
+  }
+
+  #circle {
+    background-image: linear-gradient(17deg, #FFFF, #FFFF, #FF82F9, #FF82F9, #FF82F9, #AA94B1, #fff, #AA94B1, #FF82F9, #FF82F9, #FF82F9, #FFFF, #FFFF);
+  }
+
+  .fil0 {
+    fill: black;
+  }
+
+  .fil3 {
+    fill: #FFFF61;
+    animation: windows 2s linear infinite;
+  }
+
+  .fil4 {
+    fill: #FFFF61;
+    animation: windows 3s linear infinite;
+  }
+
+  .fil6 {
+    fill: #FFFF61;
+    animation: windows 4s linear infinite;
+  }
+
+  .fil2 {
+    fill: #FFFF61;
+    animation: windows 5s linear infinite;
+  }
+
+  .fil5 {
+    fill: #FFFF61;
+    animation: windows 2s linear infinite;
+  }
+
+  .fil1 {
+    fill: #FFFF61;
+    animation: windows 2s linear infinite;
+  }
+
+
+}
+
 @media (prefers-color-scheme: light) {
-  body  { background-color: #01A6B9;}
-  #circle {background-image: linear-gradient(0deg, #F7F342, #fbb74c, #F5793B, #F76F57, #FD3C48) !important ;}
-  .fil0 {fill: #E50AE7}
-  .fil3 {fill: black}
-  .fil4 { fill: black}
-  .fil6 { fill: black}
-  .fil2 {  fill: black}
-  .fil5 {  fill: black }
-  .fil1 { fill: black}
+  body {
+    background-color: #01A6B9;
+  }
+
+  #circle {
+    background-image: linear-gradient(0deg, #F7F342, #fbb74c, #F5793B, #F76F57, #FD3C48) !important;
+  }
+
+  .fil0 {
+    fill: #E50AE7
+  }
+
+  .fil3 {
+    fill: black
+  }
+
+  .fil4 {
+    fill: black
+  }
+
+  .fil6 {
+    fill: black
+  }
+
+  .fil2 {
+    fill: black
+  }
+
+  .fil5 {
+    fill: black
+  }
+
+  .fil1 {
+    fill: black
+  }
 }
 
 /* calc 10vmax + 3vw + 2em */
