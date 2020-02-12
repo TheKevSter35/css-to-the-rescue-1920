@@ -1,0 +1,328 @@
+/* Stars */
+@keyframes stars {
+  0% {
+    background-position-y: 0;
+  }
+  100% {
+    background-position-y: 250px;
+
+  }
+}
+
+/* _____________________________________ */
+
+/* h2 */
+@keyframes text {
+    0% {
+      content: 'Please Standby.';
+    }
+  
+    25% {
+      content: 'Please Standby..';
+  
+    }
+    50% {
+      content: 'Please Standby...';
+  
+    }
+    75% {
+      content: 'Please Standby....';
+  
+    }
+    100% {
+      content: 'Please Standby.....';
+  
+    }
+  }
+/* _____________________________________ */
+
+/* static html bg */
+  @keyframes static {
+    0% {
+      background-position: 0 0;
+    }
+  
+    100% {
+      background-position: 100% 100%;
+  
+    }
+  }
+/* _____________________________________ */
+
+/* circle shadow */
+  @keyframes sunset {
+    0% {
+      box-shadow: 0px 0px 50px 4px rgba(255, 255, 255, 0.73);
+      /* transform: rotateZ(0deg); */
+    }
+  
+    25% {
+      box-shadow: 0px 0px 78px 4px rgba(255, 255, 255, 0.73);
+  
+    }
+  
+    50% {
+      box-shadow: 0px 0px 120px 4px rgba(255, 255, 255, 0.73);
+  
+    }
+  
+    75% {
+      box-shadow: 0px 0px 90px 4px rgba(255, 255, 255, 0.73);
+    }
+  
+    100% {
+      box-shadow: 0px 0px 50px 4px rgba(255, 255, 255, 0.73);
+  
+    }
+  }
+
+/* _____________________________________ */
+
+  /* musicbars */
+  @keyframes musicbar1 {
+  0% {
+    height: 150px;
+  }
+
+  50% {
+    height: 500px;
+  }
+
+  100% {
+    height: 150px;
+  }
+}
+
+@keyframes musicbar2 {
+  0% {
+    height: 250px;
+  }
+
+  25% {
+    height: 500px;
+  }
+
+  50% {
+    height: 150px;
+  }
+
+  75% {
+    height: 300px;
+  }
+
+  100% {
+    height: 250px;
+  }
+}
+
+@keyframes musicbar3 {
+  0% {
+    height: 200px;
+  }
+
+  20% {
+    height: 500px;
+  }
+
+  40% {
+    height: 350px;
+  }
+
+  60% {
+    height: 500px;
+  }
+
+  80% {
+    height: 350px;
+  }
+
+  100% {
+    height: 200px;
+  }
+}
+
+@keyframes musicbar4 {
+  0% {
+    height: 150px;
+  }
+
+  25% {
+    height: 300px;
+  }
+
+  50% {
+    height: 150px;
+  }
+
+  75% {
+    height: 400px;
+  }
+
+  100% {
+    height: 150px;
+  }
+}
+
+@keyframes musicbar5 {
+  0% {
+    height: 150px;
+  }
+
+  50% {
+    height: 300px;
+  }
+
+  100% {
+    height: 150px;
+  }
+
+}
+
+@keyframes musicbar6 {
+  0% {
+    height: 170px;
+  }
+
+  25% {
+    height: 300px;
+  }
+
+  50% {
+    height: 170px;
+  }
+
+  75% {
+    height: 450px;
+  }
+
+  100% {
+    height: 170px;
+  }
+
+}
+
+@keyframes musicbar7 {
+  0% {
+    height: 150px;
+  }
+
+  50% {
+    height: 300px;
+  }
+
+  100% {
+    height: 150px;
+  }
+
+}
+
+@keyframes musicbar8 {
+  0% {
+    height: 150px;
+  }
+
+  12.5% {
+    height: 200px;
+  }
+
+  25% {
+    height: 150px;
+  }
+
+  37.5% {
+    height: 300px;
+  }
+
+  50% {
+    height: 150px;
+  }
+
+  62.5% {
+    height: 250px;
+  }
+
+  75% {
+    height: 150px;
+  }
+
+  87.5% {
+    height: 200px;
+  }
+
+  100% {
+    height: 150px;
+  }
+
+}
+
+
+@keyframes musicbar9 {
+  0% {
+    height: 150px;
+  }
+
+  75% {
+    height: 250px;
+  }
+
+  100% {
+    height: 150px;
+  }
+}
+
+@keyframes musicbar10 {
+  0% {
+    height: 150px;
+  }
+
+  25% {
+    height: 200px;
+  }
+
+  50% {
+    height: 150px;
+  }
+
+  75% {
+    height: 200px;
+  }
+
+  100% {
+    height: 150px;
+  }
+}
+
+/* _________________________________________ */
+
+
+/* grid */
+@keyframes grid {
+  100% {
+    background-position-y: 250px;
+  }
+}
+/* skyline city */
+@media (prefers-color-scheme: dark) {
+@keyframes windows {
+  0% {
+    fill: #FFFF61;
+  }
+
+  25% {
+    fill: black;
+  }
+
+  50% {
+    fill: #FFFF61;
+  }
+
+  75% {
+    fill: black;
+  }
+
+  100% {
+    fill: #FFFF61;
+  }
+}
+
+}

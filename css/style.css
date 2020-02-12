@@ -1,0 +1,356 @@
+/*Import Google Fonts*/
+
+/****************************/
+/* Preset codes toepasbaar voor elke pagina*/
+@font-face {
+  font-family: Streamster;
+  src: url(../font/SFAlienEncounters-Italic.ttf);
+}
+
+
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  z-index: -1;
+  background-image: url(../images/static.png);
+  opacity: 0.87;
+  animation: static .5s steps(10) infinite;
+}
+
+audio {
+  position: absolute;
+  top: 15px;
+  right: 15px;
+}
+h2::after {
+  content: 'Please Standby.';
+  animation: text 2s linear infinite;
+}
+
+h2 {
+  position: absolute;
+  color: #fff;
+  left: 15px;
+  top: 0;
+  font-family: Streamster;
+}
+
+.settings p {
+  position: absolute;
+  right: 15px;
+  color: #fff;
+  top: 15px;
+}
+
+.settings {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 9;
+  display: flex;
+  flex-direction: row;
+}
+
+html {
+  background-color: #000;
+  font-family: 'Raleway', sans-serif;
+  height: 100%;
+  overflow: hidden
+}
+
+body::after {
+  content: "";
+  top: -290px;
+  left: 0;
+  bottom: 0;
+  right: 31px;
+  position: absolute;
+  background-image: url("../images/disc.png");
+  z-index: -1;
+  background-size: 5%;
+  background-position-y: 0px;
+  transform: scale(2) perspective(80px) rotatex(20deg);
+  background-repeat: repeat;
+  animation: stars 2s linear infinite;
+}
+
+body {
+  margin: 0;
+  background-color: #0B0834;
+  /* background-color: #9680e8; */
+  min-height: calc(100vh - 0px);
+  position: relative;
+  z-index: 1;
+  /* width: 80%; */
+  margin: 0 auto;
+  overflow: hidden
+}
+
+ul {
+  text-decoration: none;
+  margin: 0;
+  list-style: none;
+  padding: 0;
+}
+
+section {
+  padding: 15px;
+  /* max-width: 1170px; */
+  /* margin: 0 auto; */
+}
+
+/****************************/
+/* Headings font en kleur */
+
+main {
+  max-width: 50em;
+  margin-bottom: 5em;
+  background-color: unset;
+  margin: 0 auto;
+}
+
+.sunset #circle {
+  width: 250px;
+  height: 250px;
+  border-radius: 100%;
+  color: transparent;
+  margin: 0 auto;
+  text-align: center;
+  background-image: linear-gradient(17deg, #FF83F8, #FF82F9,  #FF82F9, #FF82F9, #FF82F9, #AA94B1, #fff, #AA94B1, #FF82F9, #FF82F9, #FF82F9, #FF82F9,#FF83F8);
+  animation: sunset 2s linear infinite;
+}
+
+.soundwave {
+  position: absolute;
+  color: black;
+  top: 0;
+  left: 0;
+  right: 0px;
+  /* width: 80em; */
+  margin: auto;
+}
+
+.soundwave ul {
+  text-decoration: none;
+  margin: 0 15px;
+  list-style: none;
+  padding: 0px;
+  display: flex;
+  transform: rotate(180deg);
+}
+
+.soundwave li {
+  width: 27px;
+  height: 520px;
+  margin: 0 1px;
+}
+
+.wave-left {
+  transform: perspective(131px) rotatey(31deg);
+  position: absolute;
+  left: 220px;
+}
+
+.wave-left li:first-child,
+.wave-right li:first-child {
+  background-color: #E50AE7;
+  animation: musicbar1 2s linear infinite;
+  height: 150px;
+}
+
+
+
+.wave-left li:nth-child(2),
+.wave-right li:nth-child(2) {
+  background-color: #CC0AE4;
+  height: 150px;
+  animation: musicbar2 2s linear infinite;
+}
+
+
+
+.wave-left li:nth-child(3),
+.wave-right li:nth-child(3) {
+  background-color: #BE0AE3;
+  height: 150px;
+  animation: musicbar3 2s linear infinite;
+}
+
+.wave-left li:nth-child(4),
+.wave-right li:nth-child(4) {
+  background-color: #AA0AE1;
+  height: 150px;
+  animation: musicbar4 2s linear infinite;
+}
+
+
+.wave-left li:nth-child(5),
+.wave-right li:nth-child(5) {
+  background-color: #940BDF;
+  height: 150px;
+  animation: musicbar5 2s linear infinite;
+}
+
+.wave-left li:nth-child(6),
+.wave-right li:nth-child(6) {
+  background-color: #7E0BDD;
+  height: 150px;
+  animation: musicbar6 2s linear infinite;
+}
+
+
+
+.wave-left li:nth-child(7),
+.wave-right li:nth-child(7) {
+  background-color: #660CDB;
+  height: 150px;
+  animation: musicbar7 2s linear infinite;
+}
+
+
+
+.wave-left li:nth-child(8),
+.wave-right li:nth-child(8) {
+  background-color: rgb(96, 33, 213);
+  height: 150px;
+  animation: musicbar8 2s linear infinite;
+}
+
+.wave-left li:nth-child(9),
+.wave-right li:nth-child(9) {
+  background-color: rgb(88, 8, 236);
+  height: 150px;
+  animation: musicbar9 2s linear infinite;
+}
+
+.wave-left li:nth-child(10),
+.wave-right li:nth-child(10) {
+  background-color: #4D0CD8;
+  height: 150px;
+  animation: musicbar10 2s linear infinite;
+
+}
+
+
+.wave-left li:last-child,
+.wave-right li:last-child {
+  background-color: transparent;
+
+}
+
+.wave-right {
+  transform: perspective(130px) rotatey(-31deg);
+  position: absolute;
+  right: 236px;
+}
+
+.wave-right ul {
+  text-decoration: none;
+  margin: 0;
+  list-style: none;
+  padding: 0;
+  display: flex;
+  flex-direction: row-reverse;
+}
+
+section.ground {
+  z-index: 1;
+  position: relative;
+  overflow: hidden;
+  min-height: calc(100vh - 280px);
+}
+
+section.ground::after {
+  background-image: linear-gradient(90deg, #380CD6, #E50AE7, #380CD6);
+  filter: brightness(1);
+  max-width: 53em;
+  overflow-x: hidden;
+  padding: 0;
+  transform: perspective(180px) rotatex(20deg);
+  position: absolute;
+  z-index: -1;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  content: "";
+  margin: 0 auto;
+}
+
+section.ground::before {
+  background-size: 200px;
+  background-image: url(../images/grid.svg);
+  filter: brightness(0.7);
+  max-width: 53em;
+  overflow: hidden;
+  padding: 0;
+  transform: perspective(180px) rotatex(20deg);
+  position: absolute;
+  z-index: 1;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  content: "";
+  animation: grid 2s linear infinite;
+  margin: 0 auto;
+}
+
+.ground img:hover {
+  padding-bottom: 340px;
+  width: 7%;
+}
+
+.ground img {
+  position: fixed;
+  bottom: 50px;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 1;
+  cursor: move;
+  cursor: grab;
+  transition: 4s ease 0s;
+  width: 20%;
+}
+
+svg {
+  position: absolute;
+  width: 35em;
+  margin: 0 auto;
+  left: 0;
+  right: 0;
+  top: 226px;
+  /* height: 305px; */
+  bottom: 0;
+}
+
+@media (prefers-color-scheme: dark) {
+  body  { background-color:  #0B0834;}
+  #circle {background-image: linear-gradient(17deg, #FF83F8, #FF82F9,  #FF82F9, #FF82F9, #FF82F9, #AA94B1, #fff, #AA94B1, #FF82F9, #FF82F9, #FF82F9, #FF82F9,#FF83F8);}
+  .fil0 {fill: black;}
+  .fil3 {fill: #FFFF61; animation: windows 2s linear infinite;}
+  .fil4 { fill: #FFFF61;animation: windows 3s linear infinite;}
+  .fil6 { fill: #FFFF61;  animation: windows 4s linear infinite;}
+  .fil2 {  fill: #FFFF61;animation: windows 5s linear infinite;}
+  .fil5 {  fill: #FFFF61; animation: windows 2s linear infinite;}
+  .fil1 { fill: #FFFF61; animation: windows 2s linear infinite;}
+
+ 
+}
+@media (prefers-color-scheme: light) {
+  body  { background-color: #01A6B9;}
+  #circle {background-image: linear-gradient(0deg, #F7F342, #fbb74c, #F5793B, #F76F57, #FD3C48) !important ;}
+  .fil0 {fill: #E50AE7}
+  .fil3 {fill: black}
+  .fil4 { fill: black}
+  .fil6 { fill: black}
+  .fil2 {  fill: black}
+  .fil5 {  fill: black }
+  .fil1 { fill: black}
+}
+
+/* calc 10vmax + 3vw + 2em */
