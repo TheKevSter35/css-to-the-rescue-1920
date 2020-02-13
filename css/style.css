@@ -14,9 +14,48 @@
 html {
   /* z-index: -1; */
   background-image: url(../images/static.png);
-  opacity: 0.87;
+  opacity: 0.95;
   animation: static .5s steps(10) infinite;
 }
+html {
+  background-color: #000;
+  font-family: 'Raleway', sans-serif;
+  height: 100%;
+  overflow: hidden
+}
+
+body::after {
+  content: "";
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  position: absolute;
+  background-image: url("../images/disc.png");
+  z-index: -1;
+  background-size: 10%;
+  background-position: center;
+  transform: scale(1.5);
+  background-repeat: repeat;
+  animation: blur 2s linear infinite;
+  filter: blur(3px);
+}
+
+
+body {
+  margin: 0;
+  /* background-color: #111111; */
+  min-height: calc(100vh - 0px);
+  position: relative;
+  z-index: 1;
+  /* width: 80%; */
+  margin: 0 auto;
+  overflow: hidden;
+  z-index: 1;
+  /* background-size: 384% 400%; */
+  /* animation: gradient 15s ease infinite; */
+}
+
 
 audio {
   position: unset;
@@ -30,8 +69,7 @@ h2::before {
   right: 0;
   left: 0;
   bottom: 0;
-  /* background-color: red; */
-  content: 'fagafafa';
+  content: '';
   transform: scale(3.5);
   z-index: -5;
   animation: text 5s ease 0s;
@@ -72,14 +110,14 @@ h2 {
   animation: text 5s ease 0s;
 }
 
-.settings p {
+section:nth-of-type(1) p {
   position: absolute;
   right: 15px;
   color: #fff;
   top: 15px;
 }
 
-.settings {
+section:nth-of-type(1) {
   position: absolute;
   top: 0;
   left: 0;
@@ -89,40 +127,6 @@ h2 {
   flex-direction: row;
 }
 
-html {
-  background-color: #000;
-  font-family: 'Raleway', sans-serif;
-  height: 100%;
-  overflow: hidden
-}
-
-body::after {
-  content: "";
-  top: -290px;
-  left: 0;
-  bottom: 0;
-  right: 31px;
-  position: absolute;
-  background-image: url("../images/disc.png");
-  z-index: 0;
-  background-size: 5%;
-  background-position-y: 0px;
-  transform: scale(2) perspective(80px) rotatex(20deg);
-  background-repeat: repeat;
-  animation: stars 2s linear infinite;
-}
-
-body {
-  margin: 0;
-  background-color: #0B0834;
-  /* background-color: #9680e8; 
-  min-height: calc(100vh - 0px);
-  position: relative;
-  z-index: 1;
-  /* width: 80%; */
-  margin: 0 auto;
-  overflow: hidden
-}
 
 ul {
   text-decoration: none;
@@ -147,18 +151,19 @@ main {
   margin: 0 auto;
 }
 
-.sunset #circle {
+section:nth-of-type(2) #circle {
   width: 250px;
   height: 250px;
   border-radius: 100%;
   color: transparent;
   margin: 0 auto;
   text-align: center;
-  background-image: linear-gradient(17deg, #FFFF, #FFFF, #FF82F9, #FF82F9, #FF82F9, #AA94B1, #fff, #AA94B1, #FF82F9, #FF82F9, #FF82F9, #FFFF, #FFFF);
+  background-image: linear-gradient(17deg, #FF82F9, #FF82F9, #FF82F9, #FF82F9,  #FF82F9,  #AA94B1, #fff, #AA94B1, #FF82F9, #FF82F9, #FF82F9, #FFFF, #FFFF);
   animation: sunset 2s linear infinite;
 }
 
-.soundwave {
+
+section:nth-of-type(4) {
   position: absolute;
   color: black;
   top: 0;
@@ -168,7 +173,7 @@ main {
   margin: auto;
 }
 
-.soundwave ul {
+section:nth-of-type(4) ul {
   text-decoration: none;
   margin: 0 15px;
   list-style: none;
@@ -177,20 +182,20 @@ main {
   transform: rotate(180deg);
 }
 
-.soundwave li {
+section:nth-of-type(4) li {
   width: 27px;
   height: 520px;
   margin: 0 1px;
 }
 
-.wave-left {
+section:nth-of-type(4) div:first-child {
   transform: translateX(-50%) perspective(8em) rotatey(31deg);
   position: absolute;
   left: 26%;
 }
 
-.wave-left li:first-child,
-.wave-right li:first-child {
+section:nth-of-type(4) div:first-child li:first-child,
+section:nth-of-type(4) div:last-child li:first-child {
   background-color: #E50AE7;
   animation: musicbar1 2s linear infinite;
   height: 150px;
@@ -198,8 +203,8 @@ main {
 
 
 
-.wave-left li:nth-child(2),
-.wave-right li:nth-child(2) {
+section:nth-of-type(4) div:first-child li:nth-child(2),
+section:nth-of-type(4) div:last-child li:nth-child(2) {
   background-color: #CC0AE4;
   height: 150px;
   animation: musicbar2 2s linear infinite;
@@ -207,30 +212,30 @@ main {
 
 
 
-.wave-left li:nth-child(3),
-.wave-right li:nth-child(3) {
+section:nth-of-type(4) div:first-child li:nth-child(3),
+section:nth-of-type(4) div:last-child li:nth-child(3) {
   background-color: #BE0AE3;
   height: 150px;
   animation: musicbar3 2s linear infinite;
 }
 
-.wave-left li:nth-child(4),
-.wave-right li:nth-child(4) {
+section:nth-of-type(4) div:first-child li:nth-child(4),
+section:nth-of-type(4) div:last-child li:nth-child(4) {
   background-color: #AA0AE1;
   height: 150px;
   animation: musicbar4 2s linear infinite;
 }
 
 
-.wave-left li:nth-child(5),
-.wave-right li:nth-child(5) {
+section:nth-of-type(4) div:first-child li:nth-child(5),
+section:nth-of-type(4) div:last-child li:nth-child(5) {
   background-color: #940BDF;
   height: 150px;
   animation: musicbar5 2s linear infinite;
 }
 
-.wave-left li:nth-child(6),
-.wave-right li:nth-child(6) {
+section:nth-of-type(4) div:first-child li:nth-child(6),
+section:nth-of-type(4) div:last-child li:nth-child(6) {
   background-color: #7E0BDD;
   height: 150px;
   animation: musicbar6 2s linear infinite;
@@ -238,8 +243,8 @@ main {
 
 
 
-.wave-left li:nth-child(7),
-.wave-right li:nth-child(7) {
+section:nth-of-type(4) div:first-child li:nth-child(7),
+section:nth-of-type(4) div:last-child li:nth-child(7) {
   background-color: #660CDB;
   height: 150px;
   animation: musicbar7 2s linear infinite;
@@ -247,22 +252,22 @@ main {
 
 
 
-.wave-left li:nth-child(8),
-.wave-right li:nth-child(8) {
+section:nth-of-type(4) div:first-child li:nth-child(8),
+section:nth-of-type(4) div:last-child li:nth-child(8) {
   background-color: rgb(96, 33, 213);
   height: 150px;
   animation: musicbar8 2s linear infinite;
 }
 
-.wave-left li:nth-child(9),
-.wave-right li:nth-child(9) {
+section:nth-of-type(4) div:first-child li:nth-child(9),
+section:nth-of-type(4) div:last-child li:nth-child(9) {
   background-color: rgb(88, 8, 236);
   height: 150px;
   animation: musicbar9 2s linear infinite;
 }
 
-.wave-left li:nth-child(10),
-.wave-right li:nth-child(10) {
+section:nth-of-type(4) div:first-child li:nth-child(10),
+section:nth-of-type(4) div:last-child li:nth-child(10) {
   background-color: #4D0CD8;
   height: 150px;
   animation: musicbar10 2s linear infinite;
@@ -270,19 +275,19 @@ main {
 }
 
 
-.wave-left li:last-child,
-.wave-right li:last-child {
+section:nth-of-type(4) div:first-child li:last-child,
+section:nth-of-type(4) div:last-child li:last-child {
   background-color: transparent;
 
 }
 
-.wave-right {
+section:nth-of-type(4) div:last-child {
   transform: translateX(50%) perspective(130px) rotatey(-31deg);
   position: absolute;
   right: 26%;
 }
 
-.wave-right ul {
+section:nth-of-type(4) div:last-child ul {
   text-decoration: none;
   margin: 0;
   list-style: none;
@@ -291,14 +296,14 @@ main {
   flex-direction: row-reverse;
 }
 
-section.ground {
+section:nth-of-type(5) {
   z-index: 1;
   position: relative;
   overflow: hidden;
   min-height: calc(100vh - 280px);
 }
 
-section.ground::after {
+section:nth-of-type(5)::after {
   background-image: linear-gradient(90deg, #380CD6, #E50AE7, #380CD6);
   filter: brightness(1);
   max-width: 56%;
@@ -315,7 +320,7 @@ section.ground::after {
   margin: 0 auto;
 }
 
-section.ground::before {
+section:nth-of-type(5)::before {
   background-size: 200px;
   background-image: url(../images/grid.svg);
   filter: brightness(0.7);
@@ -334,16 +339,17 @@ section.ground::before {
   margin: 0 auto;
 }
 
-.ground img {
+section:nth-of-type(5) .controls > img {
   position: fixed;
   bottom: 70px;
   left: 50%;
   transform: translateX(-50%);
   z-index: 1;
-  cursor: move;
-  cursor: grab;
+ 
   transition: 4s ease 0s;
+
   width: 20%;
+
 }
 
 svg {
@@ -356,47 +362,66 @@ svg {
   /* height: 305px; */
   bottom: 0;
 }
-
-.controls {
-  color: #fff;
+section:nth-of-type(5) .controls input:nth-of-type(1):focus ~ label:nth-of-type(1), 
+section:nth-of-type(5) .controls input:nth-of-type(2):focus ~ label:nth-of-type(2),
+section:nth-of-type(5) .controls input:nth-of-type(3):focus ~ label:nth-of-type(3){
+    bottom: -5px;
+    border-bottom: 3px solid #000;
+    height: 47px;
+}
+section:nth-of-type(5) .controls label {
+    position: relative;
+    border-bottom: 5px solid #000;
+    padding: 0;
+    margin: 0;
+    width: 45px;
+    height: 50px;
 }
 
-input#left:focus~img {
+section:nth-of-type(5) .controls label:nth-of-type(1)::after{
+  background-image: url("images/left-controller.svg");
+}
+section:nth-of-type(5) .controls input:nth-of-type(1):focus~img {
   left: 35%;
   transform: translateX(-65%);
 }
 
-input#center:focus~img {
+section:nth-of-type(5) .controls input:nth-of-type(2):focus~img {
   left: 50%;
   transform: translateX(-50%);
 }
 
-input#right:focus~img {
+section:nth-of-type(5) .controls input:nth-of-type(3):focus~img {
   left: 65%;
   transform: translateX(-35%);
 }
 
-#boost:active~img,
-#boost:hover~img {
+section:nth-of-type(5) .controls button:active~img,
+section:nth-of-type(5) .controls button:hover~img {
   padding-bottom: 330px;
   width: 4%;
+  transition: 2s cubic-bezier(.64,-0.67,1,.75) 0s;
 }
 
-#boost:hover {
+section:nth-of-type(5) .controls button:nth-of-type(2):hover {
   background-color: #a50101;
 }
 
-#boost {
+section:nth-of-type(5) .controls button:nth-of-type(2) {
   width: 35px;
   height: 35px;
   border-radius: 100%;
-  top: -4px;
+  top: 5px;
   position: relative;
   background-color: red;
   border-color: #000;
+  right: -10px;
+  cursor: move;
+  cursor: grab;
+  
 }
 
-.controls {
+section:nth-of-type(5) .controls {
   position: absolute;
   bottom: 50px;
   left: 0;
@@ -406,21 +431,28 @@ input#right:focus~img {
   flex-direction: row;
   justify-content: center;
   z-index: 999;
+  color: #fff;
 }
 
 input[type="radio"i] {
-  width: 25px;
-  height: 25px;
+  width: 0px;
+  height: 0px;
+}
+
+section:nth-of-type(5) .controls label img {
+  width: 45px;
 }
 
 @media (prefers-color-scheme: dark) {
   body {
-    background-color: #0B0834;
+    background-color: #111111;
+    background-image: linear-gradient(31deg, #111111, #fff, #5517D9 , #111111, #111111, #fff, #111113, #5517D9, #5517D9 ,#111111 ,#111111 ,#111111);
+    background-size: contain;
+    background-blend-mode: soft-light;
+    animation: nebula 2s linear infinite;
   }
 
-  #circle {
-    background-image: linear-gradient(17deg, #FFFF, #FFFF, #FF82F9, #FF82F9, #FF82F9, #AA94B1, #fff, #AA94B1, #FF82F9, #FF82F9, #FF82F9, #FFFF, #FFFF);
-  }
+
 
   .fil0 {
     fill: black;
@@ -460,8 +492,10 @@ input[type="radio"i] {
 }
 
 @media (prefers-color-scheme: light) {
+
   body {
-    background-color: #01A6B9;
+    background-image: linear-gradient(0deg, #01A6B9, #01A6B9);
+    animation: none;
   }
 
   #circle {
@@ -498,3 +532,9 @@ input[type="radio"i] {
 }
 
 /* calc 10vmax + 3vw + 2em */
+
+@media (prefers-reduced-motion: reduce) {
+  section:nth-of-type(2) #circle {
+    animation:sunset 0s linear infinite;
+  }
+}

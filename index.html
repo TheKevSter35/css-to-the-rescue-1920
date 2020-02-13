@@ -12,7 +12,7 @@
 <body id="page">
   <h2></h2>
   <section class="settings">
-    <audio src="music/music-neon.mp3" controls autoplay></audio>
+    <audio id="music"  src="music/music-neon.mp3" controls autoplay ></audio>
   </section>
   <section class="sunset">
     <div id="circle">
@@ -282,16 +282,24 @@
   </section>
   <section class="ground">
     <div class="controls">
+      <button id="boost"></button>
       <input type="radio" id="left" name="control" value="left">
-      <label for="left">&lt;</label>
-      <input type="radio" id="center" name="control" value="center">
-      <label for="center">&and;</label>
+      <label for="left">
+        <img src="images/left-controller.svg" alt="left-controller">
+      </label>
+      <input type="radio" id="center" name="control" autofill value="center">
+      <label for="center">
+        <img src="images/center-controller.svg" alt="center-controller">
+      </label>
       <input type="radio" id="right" name="control" value="right">
-      <label for="right">&gt;</label>
+      <label for="right">
+        <img src="images/right-controller.svg" alt="right-controller">
+      </label>
       <button id="boost"></button>
       <img src="images/car.png">
       </form>
   </section>
+  <script src="js/script.js"></script>
 </body>
 
 </html>
