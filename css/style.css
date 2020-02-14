@@ -1,27 +1,116 @@
 /*Fonts*/
 /* http://www.hipsthetic.com/alien-encounters-free-80s-font-family/ */
 /****************************/
-* {
-  box-sizing: border-box;
-}
-
+/* fonts */
 @font-face {
   font-family: Streamster;
   src: url(../font/SFAlienEncounters-Italic.ttf);
 }
 
+/* General */
+* {
+  box-sizing: border-box;
+}
 
+
+ul {
+  text-decoration: none;
+  margin: 0;
+  list-style: none;
+  padding: 0;
+}
+
+section {
+  padding: 15px;
+}
+
+main {
+  max-width: 50em;
+  margin-bottom: 5em;
+  background-color: unset;
+  margin: 0 auto;
+}
+
+svg {
+  position: absolute;
+  width: 35em;
+  margin: 0 auto;
+  left: 0;
+  right: 0;
+  top: 226px;
+  bottom: 0;
+}
+
+/* loading state */
 html {
-  /* z-index: -1; */
   background-image: url(../images/static.png);
   opacity: 0.95;
   animation: static .5s steps(10) infinite;
-}
-html {
+  width:calc(100vw);
+  height:calc(100vw);
   background-color: #000;
   font-family: 'Raleway', sans-serif;
-  height: 100%;
-  overflow: hidden
+  overflow: hidden;
+}
+h2 {
+  position: absolute;
+  color: #fff;
+  left: 0;
+  top: 50%;
+  font-family: Streamster;
+  right: 0;
+  bottom: 0;
+  width: 100%;
+  text-align: center;
+  transform: translateY(-50%);
+  font-size: 2.6em;
+  z-index: -5;
+  animation: text 5s ease 0s;
+}
+
+h2::before {
+  position: absolute;
+  top: 0;
+  right: 0;
+  left: 0;
+  bottom: 0;
+  content: '';
+  transform: scale(3.5);
+  z-index: -5;
+  animation: text 5s ease 0s;
+  opacity: 1;
+}
+
+
+h2::after {
+  content: '';
+  animation: text 5s ease 0s;
+  z-index: -5;
+}
+
+/* ------------------------------- */
+
+/* Star bg */
+
+body {
+  margin: 0;
+  min-height: calc(100vh - 0px);
+  position: relative;
+  z-index: 1;
+  margin: 0 auto;
+  overflow: hidden;
+  z-index: 1;
+}
+body::before {
+  background-color: #000;
+  content: "";
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  position: unset;
+  z-index: -5;
+  animation: text 5s ease 0s;
 }
 
 body::after {
@@ -41,67 +130,9 @@ body::after {
   filter: blur(3px);
 }
 
+/* ------------------------------- */
 
-body {
-  margin: 0;
-  /* background-color: #111111; */
-  min-height: calc(100vh - 0px);
-  position: relative;
-  z-index: 1;
-  /* width: 80%; */
-  margin: 0 auto;
-  overflow: hidden;
-  z-index: 1;
-  /* background-size: 384% 400%; */
-  /* animation: gradient 15s ease infinite; */
-}
-
-h2::before {
-  position: absolute;
-  top: 0;
-  right: 0;
-  left: 0;
-  bottom: 0;
-  content: '';
-  transform: scale(3.5);
-  z-index: -5;
-  animation: text 5s ease 0s;
-  opacity: 1;
-}
-
-body::before {
-  background-color: #000;
-  content: "";
-  left: 0;
-  right: 0;
-  top: 0;
-  bottom: 0;
-  position: unset;
-  z-index: -5;
-  animation: text 5s ease 0s;
-}
-
-h2::after {
-  content: '';
-  animation: text 5s ease 0s;
-  z-index: -5;
-}
-
-h2 {
-  position: absolute;
-  color: #fff;
-  left: 0;
-  top: 50%;
-  font-family: Streamster;
-  right: 0;
-  bottom: 0;
-  width: 100%;
-  text-align: center;
-  transform: translateY(-50%);
-  font-size: 2.6em;
-  z-index: -5;
-  animation: text 5s ease 0s;
-}
+/* Music Section 1 */
 
 embed {
   display: none;
@@ -143,29 +174,9 @@ section:nth-of-type(1) {
   flex-direction: row;
 }
 
+/* ------------------------------- */
 
-ul {
-  text-decoration: none;
-  margin: 0;
-  list-style: none;
-  padding: 0;
-}
-
-section {
-  padding: 15px;
-  /* max-width: 1170px; */
-  /* margin: 0 auto; */
-}
-
-/****************************/
-/* Headings font en kleur */
-
-main {
-  max-width: 50em;
-  margin-bottom: 5em;
-  background-color: unset;
-  margin: 0 auto;
-}
+/* Section 2  circle*/
 
 section:nth-of-type(2) #circle {
   width: 250px;
@@ -178,14 +189,15 @@ section:nth-of-type(2) #circle {
   animation: sunset 2s linear infinite;
 }
 
+/* ------------------------------- */
 
+/* Section soundwave*/
 section:nth-of-type(4) {
   position: absolute;
   color: black;
   top: 0;
   left: 0;
   right: 0px;
-  /* width: 80em; */
   margin: auto;
 }
 
@@ -203,13 +215,27 @@ section:nth-of-type(4) li {
   height: 520px;
   margin: 0 1px;
 }
-
+/* Soundbars */
 section:nth-of-type(4) div:first-child {
   transform: translateX(-50%) perspective(8em) rotatey(31deg);
   position: absolute;
   left: 26%;
 }
 
+section:nth-of-type(4) div:last-child {
+  transform: translateX(50%) perspective(130px) rotatey(-31deg);
+  position: absolute;
+  right: 26%;
+}
+
+section:nth-of-type(4) div:last-child ul {
+  text-decoration: none;
+  margin: 0;
+  list-style: none;
+  padding: 0;
+  display: flex;
+  flex-direction: row-reverse;
+}
 section:nth-of-type(4) div:first-child li:first-child,
 section:nth-of-type(4) div:last-child li:first-child {
   background-color: #E50AE7;
@@ -217,16 +243,12 @@ section:nth-of-type(4) div:last-child li:first-child {
   height: 150px;
 }
 
-
-
 section:nth-of-type(4) div:first-child li:nth-child(2),
 section:nth-of-type(4) div:last-child li:nth-child(2) {
   background-color: #CC0AE4;
   height: 150px;
   animation: musicbar2 2s linear infinite;
 }
-
-
 
 section:nth-of-type(4) div:first-child li:nth-child(3),
 section:nth-of-type(4) div:last-child li:nth-child(3) {
@@ -242,7 +264,6 @@ section:nth-of-type(4) div:last-child li:nth-child(4) {
   animation: musicbar4 2s linear infinite;
 }
 
-
 section:nth-of-type(4) div:first-child li:nth-child(5),
 section:nth-of-type(4) div:last-child li:nth-child(5) {
   background-color: #940BDF;
@@ -257,16 +278,12 @@ section:nth-of-type(4) div:last-child li:nth-child(6) {
   animation: musicbar6 2s linear infinite;
 }
 
-
-
 section:nth-of-type(4) div:first-child li:nth-child(7),
 section:nth-of-type(4) div:last-child li:nth-child(7) {
   background-color: #660CDB;
   height: 150px;
   animation: musicbar7 2s linear infinite;
 }
-
-
 
 section:nth-of-type(4) div:first-child li:nth-child(8),
 section:nth-of-type(4) div:last-child li:nth-child(8) {
@@ -287,38 +304,22 @@ section:nth-of-type(4) div:last-child li:nth-child(10) {
   background-color: #4D0CD8;
   height: 150px;
   animation: musicbar10 2s linear infinite;
-
 }
-
 
 section:nth-of-type(4) div:first-child li:last-child,
 section:nth-of-type(4) div:last-child li:last-child {
   background-color: transparent;
-
 }
+/* ------------------------------- */
 
-section:nth-of-type(4) div:last-child {
-  transform: translateX(50%) perspective(130px) rotatey(-31deg);
-  position: absolute;
-  right: 26%;
-}
-
-section:nth-of-type(4) div:last-child ul {
-  text-decoration: none;
-  margin: 0;
-  list-style: none;
-  padding: 0;
-  display: flex;
-  flex-direction: row-reverse;
-}
-
+/* section 5 ground*/
 section:nth-of-type(5) {
   z-index: 1;
   position: relative;
   overflow: hidden;
   min-height: calc(100vh - 280px);
 }
-
+/* grid bg*/
 section:nth-of-type(5)::after {
   background-image: linear-gradient(90deg, #380CD6, #E50AE7, #380CD6);
   filter: brightness(1);
@@ -335,7 +336,8 @@ section:nth-of-type(5)::after {
   content: "";
   margin: 0 auto;
 }
-
+/* ------------------------------- */
+/* grid layout*/
 section:nth-of-type(5)::before {
   background-size: 200px;
   background-image: url(../images/grid.svg);
@@ -354,31 +356,21 @@ section:nth-of-type(5)::before {
   animation: grid 2s linear infinite;
   margin: 0 auto;
 }
-
+/* ------------------------------- */
+/* car*/
 section:nth-of-type(5) .controls > img {
   position: fixed;
   bottom: 70px;
   left: 50%;
   transform: translateX(-50%);
   z-index: 1;
- 
   transition: 4s ease 0s;
-
   width: 20%;
-
 }
+/* ------------------------------- */
 
-svg {
-  position: absolute;
-  width: 35em;
-  margin: 0 auto;
-  left: 0;
-  right: 0;
-  top: 226px;
-  /* height: 305px; */
-  bottom: 0;
-}
-section:nth-of-type(5) .controls input:nth-of-type(1):focus ~ label:nth-of-type(1), 
+/* controls*/
+section:nth-of-type(5) .controls input:nth-of-type(1):focus ~ label:nth-of-type(1),
 section:nth-of-type(5) .controls input:nth-of-type(2):focus ~ label:nth-of-type(2),
 section:nth-of-type(5) .controls input:nth-of-type(3):focus ~ label:nth-of-type(3){
     bottom: -5px;
@@ -434,7 +426,7 @@ section:nth-of-type(5) .controls button:nth-of-type(2) {
   right: -10px;
   cursor: move;
   cursor: grab;
-  
+
 }
 section:nth-of-type(5) .controls button:first-child {
   opacity: 0;
@@ -460,6 +452,7 @@ input[type="radio"i] {
 section:nth-of-type(5) .controls label img {
   width: 45px;
 }
+/* ------------------------------- */
 
 @media (prefers-color-scheme: dark) {
   body {
@@ -469,8 +462,6 @@ section:nth-of-type(5) .controls label img {
     background-blend-mode: soft-light;
     animation: nebula 2s linear infinite;
   }
-
-
 
   .fil0 {
     fill: black;
@@ -549,7 +540,7 @@ section:nth-of-type(5) .controls label img {
   }
 }
 
-/* calc 10vmax + 3vw + 2em */
+
 
 @media (prefers-reduced-motion: reduce) {
   section:nth-of-type(2) #circle {
