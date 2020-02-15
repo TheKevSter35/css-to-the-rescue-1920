@@ -32,13 +32,13 @@ main {
 }
 
 svg {
-  position: absolute;
-  width: 35em;
-  margin: 0 auto;
-  left: 0;
-  right: 0;
-  top: 226px;
-  bottom: 0;
+    position: fixed;
+    width: 42em;
+    margin: 0 auto;
+    left: 0;
+    right: 0;
+    top: 25%;
+    bottom: 75%;
 }
 
 /* loading state */
