@@ -31,16 +31,17 @@ main {
   margin: 0 auto;
 }
 
-svg {
-    position: fixed;
-    width: 42em;
-    margin: 0 auto;
-    left: 0;
-    right: 0;
-    top: 25%;
-    bottom: 75%;
+section:nth-of-type(3) svg {
+  position: fixed;
+  width: 38%;
+  margin: 0 auto;
+  left: 0;
+  right: 0;
+  top: 20.7em;
+  bottom: 20em;
+  height: 18%;
+  z-index: 1;
 }
-
 /* loading state */
 html {
   background-image: url(../images/static.png);
@@ -187,6 +188,7 @@ section:nth-of-type(2) #circle {
   text-align: center;
   background-image: linear-gradient(17deg, #FF82F9, #FF82F9, #FF82F9, #FF82F9,  #FF82F9,  #AA94B1, #fff, #AA94B1, #FF82F9, #FF82F9, #FF82F9, #FFFF, #FFFF);
   animation: sunset 2s linear infinite;
+  transition: 0.7s ease 0s;
 }
 
 /* ------------------------------- */
@@ -208,6 +210,10 @@ section:nth-of-type(4) ul {
   padding: 0px;
   display: flex;
   transform: rotate(180deg);
+  position: relative;
+  top: 170px;
+  /* width: 100%; */
+  /* margin: 0 auto; */
 }
 
 section:nth-of-type(4) li {
@@ -217,7 +223,7 @@ section:nth-of-type(4) li {
 }
 /* Soundbars */
 section:nth-of-type(4) div:first-child {
-  transform: translateX(-50%) perspective(8em) rotatey(31deg);
+  transform: translateX(-50%) perspective(110px) rotatey(31deg);
   position: absolute;
   left: 26%;
 }
@@ -239,71 +245,71 @@ section:nth-of-type(4) div:last-child ul {
 section:nth-of-type(4) div:first-child li:first-child,
 section:nth-of-type(4) div:last-child li:first-child {
   background-color: #E50AE7;
-  animation: musicbar1 2s linear infinite;
-  height: 150px;
+  animation: musicbar1 5s linear infinite;
+  height: 210px;
 }
 
 section:nth-of-type(4) div:first-child li:nth-child(2),
 section:nth-of-type(4) div:last-child li:nth-child(2) {
   background-color: #CC0AE4;
   height: 150px;
-  animation: musicbar2 2s linear infinite;
+  animation: musicbar2 5s linear infinite;
 }
 
 section:nth-of-type(4) div:first-child li:nth-child(3),
 section:nth-of-type(4) div:last-child li:nth-child(3) {
   background-color: #BE0AE3;
   height: 150px;
-  animation: musicbar3 2s linear infinite;
+  animation: musicbar3 5s linear infinite;
 }
 
 section:nth-of-type(4) div:first-child li:nth-child(4),
 section:nth-of-type(4) div:last-child li:nth-child(4) {
   background-color: #AA0AE1;
   height: 150px;
-  animation: musicbar4 2s linear infinite;
+  animation: musicbar4 5s linear infinite;
 }
 
 section:nth-of-type(4) div:first-child li:nth-child(5),
 section:nth-of-type(4) div:last-child li:nth-child(5) {
   background-color: #940BDF;
   height: 150px;
-  animation: musicbar5 2s linear infinite;
+  animation: musicbar5 5s linear infinite;
 }
 
 section:nth-of-type(4) div:first-child li:nth-child(6),
 section:nth-of-type(4) div:last-child li:nth-child(6) {
   background-color: #7E0BDD;
   height: 150px;
-  animation: musicbar6 2s linear infinite;
+  animation: musicbar6 5s linear infinite;
 }
 
 section:nth-of-type(4) div:first-child li:nth-child(7),
 section:nth-of-type(4) div:last-child li:nth-child(7) {
   background-color: #660CDB;
   height: 150px;
-  animation: musicbar7 2s linear infinite;
+  animation: musicbar7 5s linear infinite;
 }
 
 section:nth-of-type(4) div:first-child li:nth-child(8),
 section:nth-of-type(4) div:last-child li:nth-child(8) {
   background-color: rgb(96, 33, 213);
   height: 150px;
-  animation: musicbar8 2s linear infinite;
+  animation: musicbar8 5s linear infinite;
 }
 
 section:nth-of-type(4) div:first-child li:nth-child(9),
 section:nth-of-type(4) div:last-child li:nth-child(9) {
   background-color: rgb(88, 8, 236);
   height: 150px;
-  animation: musicbar9 2s linear infinite;
+  animation: musicbar9 5s linear infinite;
 }
 
 section:nth-of-type(4) div:first-child li:nth-child(10),
 section:nth-of-type(4) div:last-child li:nth-child(10) {
   background-color: #4D0CD8;
   height: 150px;
-  animation: musicbar10 2s linear infinite;
+  animation: musicbar10 5s linear infinite;
 }
 
 section:nth-of-type(4) div:first-child li:last-child,
@@ -358,7 +364,7 @@ section:nth-of-type(5)::before {
 }
 /* ------------------------------- */
 /* car*/
-section:nth-of-type(5) .controls > img {
+section:nth-of-type(5) .controls > svg {
   position: fixed;
   bottom: 70px;
   left: 50%;
@@ -366,6 +372,13 @@ section:nth-of-type(5) .controls > img {
   z-index: 1;
   transition: 4s ease 0s;
   width: 20%;
+  top: unset;
+  right: unset;
+  
+}
+.cls-2, .cls-3, .cls-4 {
+  fill: #696969 !important;
+  animation: drive 2s linear infinite;
 }
 /* ------------------------------- */
 
@@ -389,25 +402,25 @@ section:nth-of-type(5) .controls label {
 section:nth-of-type(5) .controls label:nth-of-type(1)::after{
   background-image: url("images/left-controller.svg");
 }
-section:nth-of-type(5) .controls input:nth-of-type(1):focus~img {
+section:nth-of-type(5) .controls input:nth-of-type(1):focus~svg {
   left: 35%;
   transform: translateX(-65%);
 }
 
-section:nth-of-type(5) .controls input:nth-of-type(2):focus~img {
+section:nth-of-type(5) .controls input:nth-of-type(2):focus~svg {
   left: 50%;
   transform: translateX(-50%);
 }
 
-section:nth-of-type(5) .controls input:nth-of-type(3):focus~img {
+section:nth-of-type(5) .controls input:nth-of-type(3):focus~svg {
   left: 65%;
   transform: translateX(-35%);
 }
 
-section:nth-of-type(5) .controls button:active~img,
-section:nth-of-type(5) .controls button:hover~img {
-  padding-bottom: 330px;
-  width: 4%;
+section:nth-of-type(5) .controls button:active~svg,
+section:nth-of-type(5) .controls button:hover~svg {
+  padding-bottom: 400px;
+  width: 0%;
   transition: 2s cubic-bezier(.64,-0.67,1,.75) 0s;
 }
 
@@ -456,13 +469,18 @@ section:nth-of-type(5) .controls label img {
 
 @media (prefers-color-scheme: dark) {
   body {
-    background-color: #111111;
-    background-image: linear-gradient(31deg, #111111, #fff, #5517D9 , #111111, #111111, #fff, #111113, #5517D9, #5517D9 ,#111111 ,#111111 ,#111111);
-    background-size: contain;
+    background-image:url('../images/nebula.gif');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size:cover ;
     background-blend-mode: soft-light;
     animation: nebula 2s linear infinite;
+    
   }
+  section:nth-of-type(5)::after {
+    background-image: linear-gradient(90deg, #380CD6, #E50AE7, #380CD6);
 
+  }
   .fil0 {
     fill: black;
   }
@@ -510,9 +528,13 @@ section:nth-of-type(5) .controls label img {
   #circle {
     background-image: linear-gradient(0deg, #F7F342, #fbb74c, #F5793B, #F76F57, #FD3C48) !important;
   }
+  section:nth-of-type(5)::after {
+    background-image: linear-gradient(90deg,  #c15c27, #6b2d0d, #F7F342,  #6b2d0d, #6b2d0d);
+   
+  }
 
   .fil0 {
-    fill: #E50AE7
+    fill: grey
   }
 
   .fil3 {
@@ -538,6 +560,42 @@ section:nth-of-type(5) .controls label img {
   .fil1 {
     fill: black
   }
+
+
+  section:nth-of-type(4) div:first-child li:first-child,
+  section:nth-of-type(4) div:last-child li:first-child {
+    background-color: #F7F342;
+    animation: musicbar1 10s linear infinite;
+  }
+  
+  section:nth-of-type(4) div:first-child li:nth-child(2),
+  section:nth-of-type(4) div:last-child li:nth-child(2) {  background-color: #d1ce3f; animation: musicbar2 10s linear infinite;}
+  
+  section:nth-of-type(4) div:first-child li:nth-child(3),
+  section:nth-of-type(4) div:last-child li:nth-child(3) {background-color: #fbb74c; animation: musicbar3 10s linear infinite;}
+  
+  section:nth-of-type(4) div:first-child li:nth-child(4),
+  section:nth-of-type(4) div:last-child li:nth-child(4) {background-color: #F5793B; animation: musicbar4 10s linear infinite;}
+  
+  section:nth-of-type(4) div:first-child li:nth-child(5),
+  section:nth-of-type(4) div:last-child li:nth-child(5) { background-color: #F76F57; animation: musicbar5 10s linear infinite;}
+  
+  section:nth-of-type(4) div:first-child li:nth-child(6),
+  section:nth-of-type(4) div:last-child li:nth-child(6) {  background-color: #FD3C48; animation: musicbar6 10s linear infinite;}
+  
+  section:nth-of-type(4) div:first-child li:nth-child(7),
+  section:nth-of-type(4) div:last-child li:nth-child(7) {   background-color: #FD3C48; animation: musicbar7 10s linear infinite;}
+  
+  section:nth-of-type(4) div:first-child li:nth-child(8),
+  section:nth-of-type(4) div:last-child li:nth-child(8) {  background-color: #FD3C48; animation: musicbar8 10s linear infinite;}
+  
+  section:nth-of-type(4) div:first-child li:nth-child(9),
+  section:nth-of-type(4) div:last-child li:nth-child(9) {background-color: #b82c35;animation: musicbar9 10s linear infinite;}
+  
+  section:nth-of-type(4) div:first-child li:nth-child(10),
+  section:nth-of-type(4) div:last-child li:nth-child(10) {background-color: #832027;}
+
+
 }
 
 

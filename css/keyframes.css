@@ -1,22 +1,22 @@
-/* Stars */
-@keyframes blur {
+/* car */
+@keyframes drive {
   0% {
-    filter: blur(3px);
+    fill: #000 !important;;
   }
   20% {
-    filter: blur(2px);
+    fill: #010101 !important;;
   }
   40% {
-    filter: blur(1px);
+    fill: #000 !important;;
   }
   60% {
-    filter: blur(2px);
+    fill: #010101 !important;;
   }
   80% {
-    filter: blur(1px);
+    fill: #000 !important;;
   }
   100% {
-    filter: blur(3px);
+    fill: #010101 !important;;
   }
 }
 
@@ -110,26 +110,57 @@
 @keyframes sunset {
   0% {
     box-shadow: 0px 0px 50px 4px rgba(255, 255, 255, 0.73);
-    /* transform: rotateZ(0deg); */
+    transform: rotateZ(0deg);
   }
 
-  25% {
+  10% {
     box-shadow: 0px 0px 78px 4px rgba(255, 255, 255, 0.73);
-
+    transform: rotateZ(1deg);
   }
 
-  50% {
+  20% {
     box-shadow: 0px 0px 120px 4px rgba(255, 255, 255, 0.73);
+    transform: rotateZ(0deg);
 
   }
 
-  75% {
+  30% {
     box-shadow: 0px 0px 90px 4px rgba(255, 255, 255, 0.73);
+    transform: rotateZ(1deg);
   }
 
+  40% {
+    box-shadow: 0px 0px 50px 4px rgba(255, 255, 255, 0.73);
+    transform: rotateZ(0deg);
+  }
+  50% {
+    box-shadow: 0px 0px 50px 4px rgba(255, 255, 255, 0.73);
+    transform: rotateZ(0deg);
+  }
+
+  60% {
+    box-shadow: 0px 0px 78px 4px rgba(255, 255, 255, 0.73);
+    transform: rotateZ(1deg);
+  }
+
+  70% {
+    box-shadow: 0px 0px 120px 4px rgba(255, 255, 255, 0.73);
+    transform: rotateZ(0deg);
+
+  }
+
+  80% {
+    box-shadow: 0px 0px 90px 4px rgba(255, 255, 255, 0.73);
+    transform: rotateZ(1deg);
+  }
+
+  90% {
+    box-shadow: 0px 0px 50px 4px rgba(255, 255, 255, 0.73);
+    transform: rotateZ(0deg);
+  }
   100% {
     box-shadow: 0px 0px 50px 4px rgba(255, 255, 255, 0.73);
-
+    transform: rotateZ(0deg);
   }
 }
 
@@ -138,114 +169,29 @@
 /* musicbars */
 @keyframes musicbar1 {
   0% {
-    height: 150px;
+    height: 300px;
   }
 
   50% {
-    height: 500px;
+    height: 650px;
   }
 
   100% {
-    height: 150px;
+    height: 300px;
   }
 }
 
 @keyframes musicbar2 {
   0% {
-    height: 250px;
-  }
-
-  25% {
-    height: 500px;
-  }
-
-  50% {
-    height: 150px;
-  }
-
-  75% {
-    height: 300px;
-  }
-
-  100% {
-    height: 250px;
-  }
-}
-
-@keyframes musicbar3 {
-  0% {
-    height: 200px;
-  }
-
-  20% {
-    height: 500px;
-  }
-
-  40% {
-    height: 350px;
-  }
-
-  60% {
-    height: 500px;
-  }
-
-  80% {
-    height: 350px;
-  }
-
-  100% {
-    height: 200px;
-  }
-}
-
-@keyframes musicbar4 {
-  0% {
-    height: 150px;
-  }
-
-  25% {
-    height: 300px;
-  }
-
-  50% {
-    height: 150px;
-  }
-
-  75% {
     height: 400px;
   }
 
-  100% {
-    height: 150px;
-  }
-}
-
-@keyframes musicbar5 {
-  0% {
-    height: 150px;
-  }
-
-  50% {
-    height: 300px;
-  }
-
-  100% {
-    height: 150px;
-  }
-
-}
-
-@keyframes musicbar6 {
-  0% {
-    height: 170px;
-  }
-
   25% {
-    height: 300px;
+    height: 650px;
   }
 
   50% {
-    height: 170px;
+    height: 300px;
   }
 
   75% {
@@ -253,61 +199,146 @@
   }
 
   100% {
-    height: 170px;
+    height: 400px;
+  }
+}
+
+@keyframes musicbar3 {
+  0% {
+    height: 450px;
+  }
+
+  20% {
+    height: 650px;
+  }
+
+  40% {
+    height: 500px;
+  }
+
+  60% {
+    height: 650px;
+  }
+
+  80% {
+    height: 500px;
+  }
+
+  100% {
+    height: 350px;
+  }
+}
+
+@keyframes musicbar4 {
+  0% {
+    height: 300px;
+  }
+
+  25% {
+    height: 450px;
+  }
+
+  50% {
+    height: 300px;
+  }
+
+  75% {
+    height: 550px;
+  }
+
+  100% {
+    height: 300px;
+  }
+}
+
+@keyframes musicbar5 {
+  0% {
+    height: 300px;
+  }
+
+  50% {
+    height: 450px;
+  }
+
+  100% {
+    height: 300px;
+  }
+
+}
+
+@keyframes musicbar6 {
+  0% {
+    height: 320px;
+  }
+
+  25% {
+    height: 450px;
+  }
+
+  50% {
+    height: 320px;
+  }
+
+  75% {
+    height: 600px;
+  }
+
+  100% {
+    height: 320px;
   }
 
 }
 
 @keyframes musicbar7 {
   0% {
-    height: 150px;
-  }
-
-  50% {
     height: 300px;
   }
 
+  50% {
+    height: 450px;
+  }
+
   100% {
-    height: 150px;
+    height: 300px;
   }
 
 }
 
 @keyframes musicbar8 {
   0% {
-    height: 150px;
-  }
-
-  12.5% {
-    height: 200px;
-  }
-
-  25% {
-    height: 150px;
-  }
-
-  37.5% {
     height: 300px;
   }
 
+  12.5% {
+    height: 350px;
+  }
+
+  25% {
+    height: 300px;
+  }
+
+  37.5% {
+    height: 450px;
+  }
+
   50% {
-    height: 150px;
+    height: 300px;
   }
 
   62.5% {
-    height: 250px;
+    height: 400px;
   }
 
   75% {
-    height: 150px;
+    height: 300px;
   }
 
   87.5% {
-    height: 200px;
+    height: 350px;
   }
 
   100% {
-    height: 150px;
+    height: 300px;
   }
 
 }
@@ -315,37 +346,37 @@
 
 @keyframes musicbar9 {
   0% {
-    height: 150px;
+    height: 300px;
   }
 
   75% {
-    height: 250px;
+    height: 400px;
   }
 
   100% {
-    height: 150px;
+    height: 300px;
   }
 }
 
 @keyframes musicbar10 {
   0% {
-    height: 150px;
+    height: 300px;
   }
 
   25% {
-    height: 200px;
+    height: 350px;
   }
 
   50% {
-    height: 150px;
+    height: 300px;
   }
 
   75% {
-    height: 200px;
+    height: 350px;
   }
 
   100% {
-    height: 150px;
+    height: 300px;
   }
 }
 
