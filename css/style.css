@@ -1,7 +1,6 @@
-/*Fonts*/
-/* http://www.hipsthetic.com/alien-encounters-free-80s-font-family/ */
-/****************************/
+
 /* fonts */
+/* http://www.hipsthetic.com/alien-encounters-free-80s-font-family/ */
 @font-face {
   font-family: Streamster;
   src: url(../font/SFAlienEncounters-Italic.ttf);
@@ -31,17 +30,7 @@ main {
   margin: 0 auto;
 }
 
-section:nth-of-type(3) svg {
-  position: fixed;
-  width: 38%;
-  margin: 0 auto;
-  left: 0;
-  right: 0;
-  top: 20.7em;
-  bottom: 20em;
-  height: 18%;
-  z-index: 1;
-}
+
 /* loading state */
 html {
   /* background-image: url(../images/static.png); */
@@ -78,7 +67,6 @@ h2::after {
 
 /* ------------------------------- */
 
-/* Star bg */
 
 body {
   margin: 0;
@@ -119,7 +107,7 @@ body::after {
 
 /* ------------------------------- */
 
-/* Music Section 1 */
+/* settings Section 1 */
 
 embed {
   display: none;
@@ -165,7 +153,7 @@ section:nth-of-type(1) {
 
 /* ------------------------------- */
 
-/* Section 2  circle*/
+/* Section 2  sunset*/
 
 section:nth-of-type(2) #circle {
   width: 250px;
@@ -180,8 +168,21 @@ section:nth-of-type(2) #circle {
 }
 
 /* ------------------------------- */
+/* Section 3 city*/
+section:nth-of-type(3) svg {
+  position: fixed;
+  width: 38%;
+  margin: 0 auto;
+  left: 0;
+  right: 0;
+  top: 20.7em;
+  bottom: 20em;
+  height: 18%;
+  z-index: 1;
+}
+/* ------------------------------- */
 
-/* Section soundwave*/
+/* Section 4 soundwave*/
 section:nth-of-type(4) {
   position: absolute;
   color: black;
@@ -200,8 +201,6 @@ section:nth-of-type(4) ul {
   transform: rotate(180deg);
   position: relative;
   top: 170px;
-  /* width: 100%; */
-  /* margin: 0 auto; */
 }
 
 section:nth-of-type(4) li {
@@ -364,11 +363,12 @@ section:nth-of-type(5) .controls > svg {
   right: unset;
   
 }
+
 .cls-2, .cls-3, .cls-4 {
   fill: #696969 !important;
   animation: drive 2s linear infinite;
 }
-/* ------------------------------- */
+
 
 /* controls*/
 section:nth-of-type(5) .controls input:nth-of-type(1):focus ~ label:nth-of-type(1),
