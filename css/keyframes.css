@@ -368,7 +368,7 @@
     background-position-y: 250px;
   }
 }
-/* car */
+/* bg day */
 @keyframes blur {
   0% {
     filter: blur(5em);
@@ -379,6 +379,37 @@
   100% {
     filter: blur(5em);
   }
+}
+/* bg night */
+@keyframes stars {
+  0%  {
+    transform: rotate(420deg) translateY(300px);
+  }
+  20% {
+    transform: rotate(290deg) translateY(300px);
+    opacity: 0;
+  }
+  40%  {
+    transform: rotate(420deg) translateY(300px);
+    background-position: left 41px;
+    opacity: 0;
+  }
+  60%  {
+    transform: rotate(490deg) translateY(480px);
+    background-position-x: 50px;
+    opacity: 1;
+  }
+  80%  {
+    transform: rotate(560deg) translateY(480px);
+    background-position-x: 50px;
+    opacity: 0;
+  }
+  100% {
+    transform: rotate(290deg) translateY(300px);
+    opacity: 0;
+  }
+ 
+ 
 }
 
 /* _____________________________________ */
