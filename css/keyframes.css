@@ -29,12 +29,8 @@
     position: absolute;
     z-index: 999;
     content: 'Loading.';
-    background-color: #000;
     left: 0;
     right: 0;
-
-
-
   }
 
   20% {
@@ -85,24 +81,7 @@
 }
 
 /* _____________________________________ */
-/* @keyframes gradient {
-  100% {
-      background-position: 0% 50%;
-      transform: rotate3d(360deg);
 
-}
-
-/* static html bg */
-@keyframes static {
-  0% {
-    background-position: 0 0;
-  }
-
-  100% {
-    background-position: 100% 100%;
-
-  }
-} 
 
 /* _____________________________________ */
 
@@ -389,7 +368,20 @@
     background-position-y: 250px;
   }
 }
+/* car */
+@keyframes blur {
+  0% {
+    filter: blur(5em);
+  }
+  50% {
+    filter: blur(10em);
+  }
+  100% {
+    filter: blur(5em);
+  }
+}
 
+/* _____________________________________ */
 /* skyline city */
 @media (prefers-color-scheme: dark) {
   @keyframes windows {

@@ -44,9 +44,9 @@ section:nth-of-type(3) svg {
 }
 /* loading state */
 html {
-  background-image: url(../images/static.png);
+  /* background-image: url(../images/static.png); */
   opacity: 0.95;
-  animation: static .5s steps(10) infinite;
+  /* animation: static .5s steps(10) infinite; */
   width:calc(100vw);
   height:calc(100vw);
   background-color: #000;
@@ -67,19 +67,6 @@ h2 {
   font-size: 2.6em;
   z-index: -5;
   animation: text 5s ease 0s;
-}
-
-h2::before {
-  position: absolute;
-  top: 0;
-  right: 0;
-  left: 0;
-  bottom: 0;
-  content: '';
-  transform: scale(3.5);
-  z-index: -5;
-  animation: text 5s ease 0s;
-  opacity: 1;
 }
 
 
@@ -115,21 +102,17 @@ body::before {
 }
 
 body::after {
-  content: "";
-  top: 0;
-  left: 0;
-  bottom: 0;
-  right: 0;
-  position: absolute;
-  background-image: url("../images/disc.png");
-  z-index: -1;
-  background-size: 10%;
-  background-position: center;
-  transform: scale(1.5);
-  background-repeat: repeat;
-  animation: blur 2s linear infinite;
-  filter: blur(3px);
+    content: '';
+    left: 0;
+    right: 0;
+    bottom: 0;
+    top: 0;
+    background-image: linear-gradient(75deg, red, transparent);
+    position: absolute;
+    z-index: -1;
 }
+
+
 
 /* ------------------------------- */
 
@@ -142,6 +125,7 @@ embed {
 }
 button:active + embed   {
     display: block;
+    cursor: grab;	
 }
 
 section:nth-of-type(1) button {
@@ -151,6 +135,7 @@ section:nth-of-type(1) button {
   text-align: center;
   background-color: #000;
   border: 1px solid #fff;
+  cursor: url('../images/coin.png'), auto;	
 }
 section:nth-of-type(1) button:active {
   background-color: rgb(182, 182, 21);
@@ -464,6 +449,7 @@ input[type="radio"i] {
 
 section:nth-of-type(5) .controls label img {
   width: 45px;
+  cursor: grab;
 }
 /* ------------------------------- */
 
@@ -521,12 +507,22 @@ section:nth-of-type(5) .controls label img {
 @media (prefers-color-scheme: light) {
 
   body {
-    background-image: linear-gradient(0deg, #01A6B9, #01A6B9);
-    animation: none;
-  }
+    background-image: linear-gradient(180deg, #451958, #451958, #671357, #C65F36, #C65F36, #C65F36, #C55C35, #C55C35, #C25433, #CB9033, #CB9033, #CB9033, #CB9033);
 
+  }
+  @media (prefers-color-scheme: light)
+  {
+  body::after {
+
+      background-image: linear-gradient(175deg, #000, transparent, transparent);
+ 
+      background-size: cover;
+      animation: blur 2s linear infinite;
+  }
   #circle {
     background-image: linear-gradient(0deg, #F7F342, #fbb74c, #F5793B, #F76F57, #FD3C48) !important;
+    top: 245px;
+    position: relative;
   }
   section:nth-of-type(5)::after {
     background-image: linear-gradient(90deg,  #c15c27, #6b2d0d, #F7F342,  #6b2d0d, #6b2d0d);
