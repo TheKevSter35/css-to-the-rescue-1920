@@ -1,26 +1,16 @@
-/* car */
-@keyframes drive {
+/* Insert coin */
+@keyframes coin {
   0% {
-    fill: #000 !important;;
+    opacity: 1;
   }
-  20% {
-    fill: #010101 !important;;
-  }
-  40% {
-    fill: #000 !important;;
-  }
-  60% {
-    fill: #010101 !important;;
-  }
-  80% {
-    fill: #000 !important;;
+  50% {
+    opacity: 0.5;
   }
   100% {
-    fill: #010101 !important;;
+    opacity: 1;
   }
 }
 
-/* _____________________________________ */
 
 /* h2 */
 @keyframes text {

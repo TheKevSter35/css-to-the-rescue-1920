@@ -128,7 +128,8 @@ section:nth-of-type(1) button {
   border: 1px solid #fff;
   cursor: url('../images/coin.png'), auto;	
 }
-section:nth-of-type(1) button:active {
+section:nth-of-type(1) button:active,
+section:nth-of-type(1) button:focus {
   background-color: rgb(182, 182, 21);
 
 }
@@ -138,6 +139,7 @@ section:nth-of-type(1) p {
   opacity: 1;
   margin-left: 15px;
   font-family: Streamster;
+  animation: coin 4s linear infinite;
 }
 
 
@@ -216,7 +218,7 @@ section:nth-of-type(4) div:first-child {
 }
 
 section:nth-of-type(4) div:last-child {
-  transform: translateX(50%) perspective(130px) rotatey(-31deg);
+  transform: translateX(50%) perspective(110px) rotatey(-31deg);
   position: absolute;
   right: 26%;
 }
