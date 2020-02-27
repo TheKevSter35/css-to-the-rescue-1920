@@ -13,13 +13,14 @@ I made a old school arcade game in a 80s neon style.
 * Alot of animations 
 * Style changes based on users prefers color scheme and time.
 
-## What did you use in css 
+## What did you learn
 
-* @Keyframes
-* Transform: perspective
-* nth-of-type/nth-child
-* Linear Gradient 
-* Target
+* @Keyframes 
+* Transform: perspective 
+* nth-of-type (already used nth-child )
+* prefers: dark mode/ reduce motion 
+
+* Improving Linear Gradient
 
 
 ## Contexts: Dark mode (prefers-color-scheme)
@@ -42,9 +43,10 @@ Mac:  General settings > Appearance > Dark or light
 * Responsive without media queries (only the musicbars are litte weird on mobile)
 * Design responds to time (day = lightmode - night - darkmode)
 
-### Wishlist
+## Wishlist
 * Make the soundwave 100% responsive 
 * Change car colors if the user press boost button
+* make the sun/planet turn 
 
 
 
