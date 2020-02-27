@@ -33,15 +33,14 @@ main {
 
 /* loading state */
 html {
-  /* background-image: url(../images/static.png); */
   opacity: 0.95;
-  /* animation: static .5s steps(10) infinite; */
   width:calc(100vw);
   height:calc(100vw);
   background-color: #000;
   font-family: 'Raleway', sans-serif;
   overflow: hidden;
 }
+
 h2 {
   position: absolute;
   color: #fff;
@@ -157,7 +156,7 @@ section:nth-of-type(1) {
 
 /* Section 2  sunset*/
 
-section:nth-of-type(2) #circle {
+section:nth-of-type(2) > div {
   width: 250px;
   height: 250px;
   border-radius: 100%;
@@ -524,7 +523,7 @@ section:nth-of-type(5) .controls label img {
       background-size: cover;
       animation: blur 2s linear infinite;
   }
-  #circle {
+  section:nth-of-type(2) > div {
     background-image: linear-gradient(0deg, #F7F342, #fbb74c, #F5793B, #F76F57, #FD3C48) !important;
     top: 245px;
     position: relative;
@@ -602,7 +601,7 @@ section:nth-of-type(5) .controls label img {
 
 
 @media (prefers-reduced-motion: reduce) {
-  section:nth-of-type(2) #circle {
+  section:nth-of-type(2) > div {
     animation:sunset 0s linear infinite;
   }
 }
