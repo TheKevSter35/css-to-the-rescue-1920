@@ -36,8 +36,8 @@ Light Mode
 ![cdea023cfe7f146440f5e2d0a8cc8eb9](https://user-images.githubusercontent.com/43183768/75445158-27a64b00-5965-11ea-92ae-e8a38e985c69.jpg)
 
 How to change colors/theme on your pc?
-Windows: Settings > Personalization > Colors > Choose your color > Dark or light
-Mac:  General settings > Appearance > Dark or light
+* Windows: Settings > Personalization > Colors > Choose your color > Dark or light
+* Mac:  General settings > Appearance > Dark or light
 
 ## Restriction
 * Responsive without media queries (only the musicbars are litte weird on mobile)
@@ -45,8 +45,8 @@ Mac:  General settings > Appearance > Dark or light
 
 ## Wishlist
 * Make the soundwave 100% responsive 
-* Change car colors if the user press boost button
-* make the sun/planet turn 
+* Change car colors if the user press boost button or go left/right
+* Make the sun/planet turn  
 
 
 
